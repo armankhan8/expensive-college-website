@@ -1,0 +1,357 @@
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.about-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--secondary-color), transparent);
+    opacity: 0.3;
+}
+
+.about-image img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1);
+}
+
+/* Marquee Text */
+.marquee-container {
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee {
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    display: inline-block;
+    padding-right: 50px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Excellence Section */
+.excellence-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.excellence-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.excellence-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.excellence-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Courses Section Styling */
+.courses {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.courses-grid {
+    display: flex; /* Enable horizontal alignment */
+    gap: 2rem; /* Space between course cards */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Smooth scrolling experience */
+    padding: 1rem 0;
+}
+
+.course-card {
+    min-width: 300px; /* Set a fixed width for each card */
+    flex: 0 0 auto; /* Prevent shrinking or growing */
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-image img {
+    transform: scale(1.1);
+}
+
+.course-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.course-content h3 {
+    font-size: 1.5rem;
+    color: #2b6777;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.course-content p {
+    color: #555;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.course-content .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #2b6777;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.course-content .btn:hover {
+    background: #52ab98;
+    transform: translateY(-3px);
+}
+
+
+
+
+/* Faculty Section Enhancement */
+.faculty-grid {
+    display: flex; /* Changed from grid to flex */
+    gap: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 1rem;
+    scroll-snap-type: x mandatory; /* Smooth scrolling experience */
+}
+
+.faculty-card {
+    min-width: 250px; /* Ensure cards are scrollable horizontally */
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-10px);
+}
+
+.faculty-image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.faculty-card:hover .faculty-image img {
+    transform: scale(1.1);
+}
+
+.faculty-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.faculty-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.faculty-info p {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.faculty-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.faculty-social a {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.faculty-social a:hover {
+    background: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Events Section Enhancement */
+.events-grid {
+    display: flex; /* Changed from grid to flex */
+    gap: 2rem;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 1rem;
+    scroll-snap-type: x mandatory; /* Smooth scrolling experience */
+}
+
+.event-card {
+    min-width: 300px; /* Ensure cards are scrollable horizontally */
+    flex: 0 0 auto;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.1);
+}
+
+.event-content {
+    padding: 1.5rem;
+}
+
+.event-date {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.event-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.event-description {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+
+/* Social Media Enhancement */
+.social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px) rotate(360deg);
+    box-shadow: 0 5px 15px rgba(52,152,219,0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .excellence-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .faculty-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .excellence-grid {
+        grid-template-columns: 1fr;
+    }
+}
